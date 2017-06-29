@@ -20,13 +20,33 @@
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="assets/plugins/swiper/css/swiper.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet" type="text/css" />
     <!-- END PLUGINS -->
     <!-- BEGIN PAGES CSS -->
     <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
     <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
     <!-- BEGIN PAGES CSS -->
+    <!-- upload-->
+    <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.10/uploadfile.css" rel="stylesheet">
+    <!-- End-->
   </head>
   <body>
+  <script>
+ function disableSubmit() {
+  document.getElementById("submit").disabled = true;
+ }
+
+  function activateButton(element) {
+
+      if(element.checked) {
+        document.getElementById("submit").disabled = false;
+       }
+       else  {
+        document.getElementById("submit").disabled = true;
+      }
+
+  }
+</script>
     <!-- BEGIN HEADER -->
     <nav class="header bg-header transparent-dark " data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
       <div class="container relative">
@@ -35,7 +55,7 @@
           <!-- .header-inner Allows to vertically Align elements to the Center-->
           <div class="header-inner">
             <!-- BEGIN LOGO -->
-            <img src="assets/images/logo-03.png" width="240" height="auto" data-src-retina="assets/images/logo-03.png" class="logo" alt="" style="position:absolute;top: -10px;">
+             <img src="assets/images/logo-03.png" width="240" height="auto" data-src-retina="assets/images/logo-03.png" class="logo" alt="" style="position:absolute;top: -10px;">
             <img src="assets/images/logo-03.png" width="180" height="auto" data-src-retina="assets/images/logo-03.png" class="alt" alt="" style="position:absolute;top: -10px;">
           </div>
         </div>
@@ -62,7 +82,7 @@
           <!-- END HEADER CLOSE TOGGLE FOR MOBILE -->
           <!-- BEGIN MENU ITEMS -->
           <div class="header-inner">
-                  <ul class="menu">
+            <ul class="menu">
               <li>
                 <a href="index.html" class="active">Home </a>
               </li>
@@ -104,25 +124,8 @@
               <li>
                  <a href="contact.html">Contact Us</a>
               </li>
-              <li class="classic">
-                <a href="form.html">
-                    Account
-                  <i class="pg-arrow_minimize m-l-5"></i>
-                  </a>
-                <nav class="classic ">
-                  <span class="arrow"></span>
-                  <ul>
-                    <li>
-                      <a href="http://pages.revox.io/frontend/1.0/doc/#color" target="_blank">My Account</a>
-                    </li>
-                    <li>
-                      <a href="http://pages.revox.io/frontend/1.0/doc/#icons" target="_blank">Login</a>
-                    </li>
-                    <li>
-                      <a href="http://pages.revox.io/frontend/1.0/doc/#buttons" target="_blank">Signup</a>
-                    </li>
-                  </ul>
-                </nav>
+              <li>
+                <a href="contact.html">Account</a>
               </li>
             </ul>
             <!--<a href="#" class="search-toggle hidden-xs hidden-sm" data-toggle="search"><i class="fs-14 pg-search"></i></a>-->
@@ -139,103 +142,59 @@
       </div>
     </nav>
     <!-- END HEADER -->
-    <div class="m-t-60">
-      <!-- START CONTACT SECTION -->
-      <section class="container container-fixed-lg p-t-65 p-b-100  sm-p-b-30 sm-m-b-30">
-        <div class="row">
-          <div class="col-md-6">
-            <h2>How can we assist you?</h2>
-            <div class="p-r-40 sm-p-r-0">
-              <p>Despite the UI, We thought of the User experience, With attached From Layouts you can simply categories Important fields and prioritize them.</p>
-              <br>
-              <br>
-              <div class="panel" id="contact-panel">
-                <p class="semi-bold no-margin">Fill up this form to contact us if you have any futher questions</p>
-                <form role="form" autocomplete="off" class="m-t-15" id="contact-form" action="_lib/mail.php" method="post">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="form-group form-group-default required">
-                        <label class="control-label">First name</label>
-                        <input type="text" name="name" class="form-control" required>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="form-group form-group-default">
-                        <label class="control-label">Last name</label>
-                        <input type="text" name="last-name" class="form-control" required>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group form-group-default">
-                    <label class="control-label">Email</label>
-                    <input type="email" name="email" placeholder="This can be changed later" class="form-control" required>
-                  </div>
-                  <div class="form-group form-group-default">
-                    <label class="control-label">Message</label>
-                    <textarea name="message" placeholder="Type the message you wish to send" style="height:100px" class="form-control" required></textarea>
-                  </div>
-                  <div class="sm-p-t-10 clearfix">
-                    <p class="pull-left small hint-text m-t-5 font-arial">I hereby certify that the information above is true and accurate. </p>
-                    <button class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left">Submit</button>
-                  </div>
-                  <div class="clearfix"></div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="visible-xs visible-sm b-b b-grey-light m-t-35 m-b-30"></div>
-            <div class="p-l-40 sm-p-l-0 sm-p-t-10">
-              <h3>Showcase and guide users with a <br>
-better User Interface &amp; Experience.</h3>
-              <p>Our motivation "Perfection simplified" helps to craft meaningful experiences for the people around us,This mission inspires us to jump out of bed each day and guides every aspect of what we do.</p>
-              <br>
-              <div class="row">
-                <div class="col-sm-6">
-                  <h5 class="block-title hint-text m-b-0">california </h5>
-                  <address class="m-t-10">Stanford co.
-                                <br> 54 E Pear St
-                                <br> Oklahoma city OK 73102</address>
-                  <br>
-                  <p class="hint-text no-margin"><span class="fs-12 font-montserrat bold all-caps p-r-10">Tel</span> <span class="fs-14">(877) 412-7766</span></p>
-                  <p class="hint-text"><span class="fs-12 font-montserrat bold all-caps p-r-10">Fax</span> <span class="fs-14">(877) 412-7766</span></p>
-                </div>
-                <div class="col-sm-6">
-                  <h5 class="block-title hint-text m-b-0">canada </h5>
-                  <address class="m-t-10">Station 322
-                                <br> Ottawa Ontario K1AOB1
-                                <br> Canada.
-                            </address>
-                  <br>
-                  <p class="hint-text no-margin"><span class="fs-12 font-montserrat bold all-caps p-r-10">Tel</span> <span class="fs-14">(877) 412-7766</span></p>
-                  <p class="hint-text"><span class="fs-12 font-montserrat bold all-caps p-r-10">Fax</span> <span class="fs-14">(877) 412-7766</span></p>
-                </div>
-              </div>
-              <br>
-              <h5 class="block-title hint-text m-b-0">pages Public Inquiries &amp; Communications </h5>
-              <br>
-              <div class="row">
-                <div class="col-sm-6">
-                  <p class="fs-12 font-montserrat bold all-caps no-margin hint-text">Hotline </p>
-                  <p class="hint-text no-margin fs-14">(877) 412-7766</p>
-                </div>
-                <div class="col-sm-6">
-                  <p class="fs-12 font-montserrat bold all-caps no-margin hint-text">Email </p>
-                  <p class="hint-text no-margin fs-14">support@revox.io</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- BEGIN HERO WITH PARALLAX -->
+    <section class="demo-hero-5" data-pages="parallax" data-pages-bg-image="assets/images/career.jpeg">
+      <div class="container-xs-height full-height">
+        <div class="col-xs-height col-middle text-center">
+          <h1 class="text-white inner">Your in good hands</h1>
         </div>
-      </section>
-      <!-- END CONTACT SECION -->
-      <!-- START GOOGLE MAP -->
-      <section class="container-fluid  no-padding no-overflow">
-        <!-- Map -->
-        <div id="google-map" class="full-width demo-map gradient-overlay no-overflow"></div>
-      </section>
-      <!-- END GOOGLE MAP -->
+      </div>
+    </section>
+    <!-- END HERO WITH PARALLAX -->
+
+    <section class="container container-fixed-lg p-t-65 p-b-100  sm-p-b-30 sm-m-b-30">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Join Us Now!</h1>
+            <div class="p-r-40 sm-p-r-0">
+                <div class="panel" id="contact-panel">
+                    <p class="semi-bold no-margin text-center">Fill up this form to contact us if you have any futher questions</p>
+                    <div class="row" style="margin-top: 50px;"></div>
+                    <form role="form" autocomplete="off" class="m-t-15" id="contact-form" action="_lib/mail.php" method="post">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group form-group-default required">
+                                    <label>First name</label>
+                                    <input type="text" name="name" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group form-group-default">
+                                    <label>Last name</label>
+                                    <input type="text" name="last-name" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-default">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="This can be changed later" class="form-control" required>
+                        </div>
+                        <div class="form-group form-group-default">
+                            <label>Message</label>
+                            <textarea name="message" placeholder="Type the message you wish to send" style="height:100px" class="form-control" required></textarea>
+                        </div>
+                        <div class="sm-p-t-10 clearfix">
+                            <p class="pull-left small hint-text m-t-5 font-arial">I hereby certify that the information above is true and accurate. </p>
+                            <button class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left" >Submit</button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+
     <!-- BEGIN FOOTER -->
     <section class="p-b-55 p-t-75 xs-p-b-20 bg-master-darker ">
       <div class="container">
@@ -350,5 +309,44 @@ better User Interface &amp; Experience.</h3>
     <script type="text/javascript" src="assets/js/custom.js"></script>
     <script type="text/javascript" src="assets/js/contact.js"></script>
     <script type="text/javascript" src="assets/js/google_map.js"></script>
+    <!--Date-picker-script-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <!--Date-picker-script-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!--upload-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://hayageek.github.io/jQuery-Upload-File/4.0.10/jquery.uploadfile.min.js"></script>
+    <!-- End-->
+    <script language="javascript">
+        $(document).ready(function () {
+            $("#txtdate").datepicker({
+                minDate: 0
+            });
+        });
+    </script>
+    <script>
+            jQuery(function () {
+              jQuery("#datepicker").datepicker({
+                    autoclose: true,
+                    todayHighlight: true
+              }).datepicker('update', new Date());
+            });
+     jQuery(function () {
+     jQuery('#datepicker').datepicker({
+         minDate:new Date()
+      });
+ });
+
+        </script>
+    <script>
+            jQuery("#fileuploader").uploadFile({
+            url:"upload.php",
+            multiple:true,
+            dragDrop:true,
+            fileName:"myfile"
+            });
+    </script>
   </body>
 </html>

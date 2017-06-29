@@ -8736,4 +8736,17 @@ sup.dollar {
 .w-90{
   width: 90px;
 }
-
+.pl-0{
+    padding-left: 0px;
+    cursor: hand;
+}
+.form-group {
+    margin-bottom: 20px!important;
+}
+.form-control{
+    height: 45px!important;
+}
+.dimension{
+    height: auto;
+    width: 300px;
+}

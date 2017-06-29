@@ -26,8 +26,27 @@
     <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
     <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
     <!-- BEGIN PAGES CSS -->
+    <!-- upload-->
+    <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.10/uploadfile.css" rel="stylesheet">
+    <!-- End-->
   </head>
   <body>
+  <script>
+ function disableSubmit() {
+  document.getElementById("submit").disabled = true;
+ }
+
+  function activateButton(element) {
+
+      if(element.checked) {
+        document.getElementById("submit").disabled = false;
+       }
+       else  {
+        document.getElementById("submit").disabled = true;
+      }
+
+  }
+</script>
     <!-- BEGIN HEADER -->
     <nav class="header bg-header transparent-dark " data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
       <div class="container relative">
@@ -36,8 +55,8 @@
           <!-- .header-inner Allows to vertically Align elements to the Center-->
           <div class="header-inner">
             <!-- BEGIN LOGO -->
-            <img src="assets/images/logo-header.png" width="152" height="21" data-src-retina="assets/images/logo_black_2x.png" class="logo" alt="">
-            <img src="assets/images/logo_white.png" width="152" height="21" data-src-retina="assets/images/logo_white_2x.png" class="alt" alt="">
+             <img src="assets/images/logo-03.png" width="240" height="auto" data-src-retina="assets/images/logo-03.png" class="logo" alt="" style="position:absolute;top: -10px;">
+            <img src="assets/images/logo-03.png" width="180" height="auto" data-src-retina="assets/images/logo-03.png" class="alt" alt="" style="position:absolute;top: -10px;">
           </div>
         </div>
         <!-- BEGIN HEADER TOGGLE FOR MOBILE & TABLET -->
@@ -65,50 +84,51 @@
           <div class="header-inner">
             <ul class="menu">
               <li>
-                <a href="index.html">Home </a>
+                <a href="index.html" class="active">Home </a>
               </li>
               <li class="classic">
-                <a href="javascript:;">
-                    Elements  <i class="pg-arrow_minimize m-l-5"></i>
+                <a href="form.html">
+                    Get Quotation
+                  <!--<i class="pg-arrow_minimize m-l-5"></i>-->
                   </a>
-                <nav class="classic ">
-                  <span class="arrow"></span>
-                  <ul>
-                    <li>
-                      <a href="http://pages.revox.io/frontend/1.0/doc/#color" target="_blank">Colors</a>
-                    </li>
-                    <li>
-                      <a href="http://pages.revox.io/frontend/1.0/doc/#icons" target="_blank">Icons</a>
-                    </li>
-                    <li>
-                      <a href="http://pages.revox.io/frontend/1.0/doc/#buttons" target="_blank">Buttons</a>
-                    </li>
-                    <li>
-                      <a href="http://pages.revox.io/frontend/1.0/doc/#modals" target="_blank">Modals</a>
-                    </li>
-                    <li>
-                      <a href="http://pages.revox.io/frontend/1.0/doc/#progress_bars" target="_blank">Progress &amp; Activity</a>
-                    </li>
-                    <li>
-                      <a href="http://pages.revox.io/frontend/1.0/doc/#accordians" target="_blank">Accordians</a>
-                    </li>
-                    <li>
-                      <a href="http://pages.revox.io/frontend/1.0/doc/#tabs" target="_blank">Tabs</a>
-                    </li>
-                  </ul>
-                </nav>
+                <!--<nav class="classic ">-->
+                  <!--<span class="arrow"></span>-->
+                  <!--<ul>-->
+                    <!--<li>-->
+                      <!--<a href="http://pages.revox.io/frontend/1.0/doc/#color" target="_blank">Colors</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                      <!--<a href="http://pages.revox.io/frontend/1.0/doc/#icons" target="_blank">Icons</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                      <!--<a href="http://pages.revox.io/frontend/1.0/doc/#buttons" target="_blank">Buttons</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                      <!--<a href="http://pages.revox.io/frontend/1.0/doc/#modals" target="_blank">Modals</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                      <!--<a href="http://pages.revox.io/frontend/1.0/doc/#progress_bars" target="_blank">Progress &amp; Activity</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                      <!--<a href="http://pages.revox.io/frontend/1.0/doc/#accordians" target="_blank">Accordians</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                      <!--<a href="http://pages.revox.io/frontend/1.0/doc/#tabs" target="_blank">Tabs</a>-->
+                    <!--</li>-->
+                  <!--</ul>-->
+                <!--</nav>-->
               </li>
               <li>
-                <a href="pricing.html">Pricing </a>
+                <a href="career.html">Career </a>
               </li>
               <li>
-                <a href="portfolio.html">Portfolio </a>
+                 <a href="contact.html">Contact Us</a>
               </li>
               <li>
-                <a href="contact.html" class="active">Contact Us</a>
+                <a href="contact.html">Account</a>
               </li>
             </ul>
-            <a href="#" class="search-toggle hidden-xs hidden-sm" data-toggle="search"><i class="fs-14 pg-search"></i></a>
+            <!--<a href="#" class="search-toggle hidden-xs hidden-sm" data-toggle="search"><i class="fs-14 pg-search"></i></a>-->
             <!-- BEGIN COPYRIGHT FOR MOBILE -->
             <div class="font-arial m-l-35 m-r-35 m-b-20 visible-sm visible-xs m-t-20">
               <p class="fs-11 no-margin small-text p-b-20">Exclusive only at ,Themeforest. See Standard licenses & Extended licenses
@@ -123,7 +143,7 @@
     </nav>
     <!-- END HEADER -->
     <!-- BEGIN HERO WITH PARALLAX -->
-    <section class="demo-hero-5" data-pages="parallax" data-pages-bg-image="assets/images/gallery_hero_1.jpg">
+    <section class="demo-hero-5" data-pages="parallax" data-pages-bg-image="assets/images/form.jpeg">
       <div class="container-xs-height full-height">
         <div class="col-xs-height col-middle text-center">
           <h1 class="text-white inner">Your in good hands</h1>
@@ -132,7 +152,7 @@
     </section>
     <!-- END HERO WITH PARALLAX -->
 
-    <div class="row" style="margin-top: 40px;margin-bottom: 40px;">
+    <div class="row" style="margin-top: 40px;margin-bottom: 20px;">
       <div class="col-md-12">
         <div class="container">
           <div class="row">
@@ -223,7 +243,20 @@
         </div>
       </div>
     </div>
-
+    <!-- Upload-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container">
+            <div class="col-md-6 pl-0">
+                <div id="fileuploader">Upload</div>
+            </div>
+            <div class="col-md-6" onload="disableSubmit()">
+                <input type="checkbox" name="terms" id="terms" onchange="activateButton(this)">  I Agree Terms & Coditions
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End-->
     <!-- BEGIN FOOTER -->
     <section class="p-b-55 p-t-75 xs-p-b-20 bg-master-darker ">
       <div class="container">
@@ -342,8 +375,12 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
     <!--Date-picker-script-->
-   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!--upload-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://hayageek.github.io/jQuery-Upload-File/4.0.10/jquery.uploadfile.min.js"></script>
+    <!-- End-->
     <script language="javascript">
         $(document).ready(function () {
             $("#txtdate").datepicker({
@@ -365,5 +402,13 @@
  });
 
         </script>
+    <script>
+            jQuery("#fileuploader").uploadFile({
+            url:"upload.php",
+            multiple:true,
+            dragDrop:true,
+            fileName:"myfile"
+            });
+    </script>
   </body>
 </html>
